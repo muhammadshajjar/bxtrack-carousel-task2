@@ -1,38 +1,91 @@
-.App {
-  text-align: center;
+h2,
+p {
+  margin: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.carouselSection {
+  margin-left: 6.25rem;
+}
+.container {
+  max-width: 118.75rem;
+  width: 98%;
+  margin: 0 auto;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.content {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+  max-width: 81.25rem;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  position: relative;
+  padding: 5rem 0 1rem 0;
+  background-image: url("./assets/images/bgIllustration.png");
+  background-repeat: no-repeat;
+  margin: 0 5.625rem;
+  gap: 20px;
+}
+
+.contentInfo {
+  margin-left: 18.75rem;
+}
+.contentInfo h2 {
+  font-size: 3rem;
+  font-weight: 300;
+  color: black;
+  margin: 0.9rem 0;
+}
+.contentInfo p {
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: var(--primary-color);
+}
+
+/*Override slick carousel custom styling*/
+
+.slick-dots {
+  position: relative !important;
+}
+.slick-dots li.slick-active button:before {
+  color: white !important;
+}
+.slick-dots li.slick-active button {
+  border: 8px solid black;
+  border-radius: 50%;
+  padding: 0;
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.slick-list {
+  overflow: scroll !important;
+  scroll-behavior: smooth;
+}
+.slick-list::-webkit-scrollbar {
+  display: none;
+}
+.slick-slide > div {
+  width: auto;
+  margin-right: 1.875rem;
+  display: flex;
+  justify-content: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media screen and (max-width: 1200px) {
+  .content {
+    margin: 0;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+@media screen and (max-width: 1100px) {
+  .contentInfo {
+    margin-left: 20px;
+  }
+  .carouselSection {
+    margin-left: 0;
+  }
+  .content {
+    margin: 0;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    background-image: none;
   }
 }
